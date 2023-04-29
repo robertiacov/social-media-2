@@ -2,7 +2,7 @@ import type {NextPage} from 'next';
 import axios from 'axios';
 
 
-const Home: NextPage = () => {
+const Home: NextPage = ({}) => {
   return (
     <h1 className="text-3xl font-bold underline">
       Hello world!
@@ -11,12 +11,13 @@ const Home: NextPage = () => {
 }
 
 export const getServerSideProps = async () => {
-  const response = await axios.get(`http://localhost:3000/api/post`)
+  const {data} = await axios.get(`http://localhost:3000/api/post`)
 
-  console.log(response.data.name)
 
   return {
-    props: {}
+    props: {
+      videos: data
+    }
   }
 }
 
