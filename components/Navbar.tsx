@@ -10,8 +10,10 @@ import { IoMdAdd } from 'react-icons/io'
 import Logo from '../utils/tiktik-logo.png'
 import { createOrGetUser } from '../utils'
 
+import userAuthStore from '../store/authStore'
+
 const Navbar = () => {
-  const user = false
+  const {userProfile, addUser, removeUser} = userAuthStore();
   
   return (
     <div className='w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4'>
@@ -29,12 +31,42 @@ const Navbar = () => {
         <div>SEARCH</div>
 
         <div>
-          {user ? (
-            <div>Logged In</div>
+          {userProfile ? (
+            <div className='flex gap-5 md:gap-10'>
+              <Link href="/">
+                <button className='border-2 px-2 md:px-4 text-md font-semibold flex items-center gap-2'>
+                  <IoMdAdd className='text-xl'/> {` `}
+                  <span className='hidden md:block'>Upload</span>
+                </button>
+              </Link>
+              {userProfile.image && (
+                <Link href="/">
+                <div>
+                  <Image
+                    className='rounded-full cursor-pointer'
+                    src={userProfile.image}
+                    alt='user'
+                    width={40}
+                    height={40}
+                  />
+                </div>
+              </Link>
+              )}
+              <button
+                type='button'
+                className=' border-2 p-2 rounded-full cursor-pointer outline-none shadow-md'
+                onClick={() => {
+                  googleLogout();
+                  removeUser();
+                }}
+              >
+                <AiOutlineLogout color='red' fontSize={21} />
+              </button>
+            </div>
           ) : (
             <GoogleLogin 
-              onSuccess={(response) => createOrGetUser(response)}
-              onError={() => console.log('Error')}
+              onSuccess={(response) => createOrGetUser(response, addUser)}
+              onError={() => console.log('Login Failed')}
               />
           )}
         </div>
