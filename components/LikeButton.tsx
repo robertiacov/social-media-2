@@ -4,7 +4,13 @@ import { NextPage } from 'next';
 
 import useAuthStore from '../store/authStore';
 
-const LikeButton = () => {
+interface IProps{
+    handleLike: () => void;
+    handleDislike: () => void;
+
+}
+
+const LikeButton = ({likes, handleLike, handleDislike}:IProps) => {
     const [alreadyLiked, setAlreadyLiked] = useState(false)
     const {userProfile} = useAuthStore()
 
@@ -20,6 +26,7 @@ const LikeButton = () => {
                     <MdFavorite className='text-lg md:text-2xl' />
                 </div>
             )}
+            <p className='text-md font-semibold '>{likes?.length || 0}</p>
         </div>
     </div>
   )
