@@ -11,6 +11,10 @@ import axios from 'axios';
 import { BASE_URL } from '../../utils';
 import { Video } from '../../types';
 
+import userAuthStore from '../../store/authStore';
+import LikeButton from '../../components/LikeButton';
+import Comments from '../../components/Comments';
+
 interface IProps {
     postDetails: Video,
 }
@@ -21,6 +25,7 @@ const Detail = ({postDetails}: IProps) => {
     const [isVideoMuted, setIsVideoMuted] = useState(false)
     const videoRef = useRef<HTMLVideoElement>(null);
     const router = useRouter();
+    const {userProfile} = userAuthStore();
 
     const onVideoClick = () => {
         if (playing) {
@@ -102,7 +107,20 @@ const Detail = ({postDetails}: IProps) => {
                     </div>
                   </div>
                 </Link>
+                <div className='px-10'>
+                    <p className=' text-lg text-gray-600'>{post.caption}</p>
+                </div>
+                <div className='mt-10 px-10'>
+                    {userProfile && (
+                        <LikeButton 
+                        
+                        />
+                    )}
+                </div>
             </div>
+            <Comments 
+            
+            />
 
         </div>
 
