@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -15,9 +15,16 @@ import userAuthStore from '../store/authStore'
 
 const Navbar = () => {
   const {userProfile, addUser, removeUser} = userAuthStore();
+  const [searchValue, setSearchValue] = useState('');
 
-  const handleSearch = () => {
+  const router = useRouter();
 
+  const handleSearch = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    if (searchValue) {
+      router.push(`/search/${searchValue}`)
+    }
   }
   
   return (
@@ -40,7 +47,8 @@ const Navbar = () => {
           >
             <input 
               type="text"
-              onChange={() => {}}
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
               placeholder='Search accounts and videos'
               className='bg-primary p-3 md:text-md font-medium border-2 border-gray-100 focus:outline-none focus:border-2 focus:border-gray-300 w-[300px] md:w-[350px] rounded-full  md:top-0'
             />
