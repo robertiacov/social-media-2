@@ -32,11 +32,11 @@ const Sidebar = () => {
                 <div className='xl:border-b-2 border-gray-200 xl:pb-4'>
                     <Link href="/">
                         <div className={normalLink}>
-                            <p className='text-2x1'>
+                            <p className='text-2x1 text-[#663399]'>
                                 <AiFillHome />
                             </p>
-                            <span className='capitalize text-xl hidden xl:block'>
-                                For You
+                            <span className='capitalize text-xl hidden xl:block text-[#663399]'>
+                                Home
                             </span>
                         </div>
                     </Link>
