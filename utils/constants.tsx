@@ -1,6 +1,9 @@
-import { BsCode, BsEmojiSunglasses } from 'react-icons/bs';
-import { GiCakeSlice, GiGalaxy, GiLipstick } from 'react-icons/gi';
-import { FaPaw, FaMedal, FaGamepad } from 'react-icons/fa';
+import { BsCode } from 'react-icons/bs';
+import { FaPaw, FaTshirt, FaLaughSquint } from 'react-icons/fa';
+import { MdTheaterComedy, MdSportsBasketball } from 'react-icons/md';
+import { IoGameController, IoMusicalNotes } from "react-icons/io5";
+import { TbSalad } from 'react-icons/tb'
+import { GiReceiveMoney } from 'react-icons/gi'
 
 export const topics = [
   {
@@ -9,23 +12,23 @@ export const topics = [
   },
   {
     name: 'comedy',
-    icon: <BsEmojiSunglasses />,
+    icon: <MdTheaterComedy />,
   },
   {
     name: 'gaming',
-    icon: <FaGamepad />,
+    icon: <IoGameController />,
+  },
+  {
+    name: 'entertainment',
+    icon: <FaLaughSquint />,
   },
   {
     name: 'food',
-    icon: <GiCakeSlice />,
+    icon: <TbSalad />,
   },
   {
-    name: 'dance',
-    icon: <GiGalaxy />,
-  },
-  {
-    name: 'beauty',
-    icon: <GiLipstick />,
+    name: 'fashion',
+    icon: <FaTshirt />,
   },
   {
     name: 'animals',
@@ -33,7 +36,15 @@ export const topics = [
   },
   {
     name: 'sports',
-    icon: <FaMedal />,
+    icon: <MdSportsBasketball />,
+  },
+  {
+    name: 'music',
+    icon: <IoMusicalNotes />,
+  },
+  {
+    name: 'finance',
+    icon: <GiReceiveMoney />,
   },
 ];
 
