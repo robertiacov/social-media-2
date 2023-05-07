@@ -113,7 +113,7 @@ const Upload = () => {
                                             Up to 10 minutes <br />
                                             Less than 2 GB
                                         </p>
-                                        <p className='bg-[#F51997] text-center mt-10 rounded text-white text-md font-medium p-2 w-52 outline-none'>
+                                        <p className='rounded-lg text-center mt-10 rounded text-white text-md font-medium p-2 w-52 outline-none group bg-gradient-to-br from-purple-600 to-blue-500 dark:text-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800'>
                                             Select file
                                         </p>
                                     </div>
@@ -146,7 +146,7 @@ const Upload = () => {
                             onChange={(e) => setCaption(e.target.value)}
                             className='border-2 border-gray-200 rounded p-2 outline-none text-md'    
                         />
-                        <label className='text-md font-medium'>Choose a Category</label>
+                        <label className='text-md font-medium v'>Choose a Category</label>
                         <select
                             onChange={(e) => setCategory(e.target.value)}
                             className='outline-none border-2 border-gray-200 text-md capitalize lg:p-4 p-2 rounded cursor-pointer'
@@ -165,14 +165,14 @@ const Upload = () => {
                             <button
                                 onClick={() => {}}
                                 type='button'
-                                className='border-gray-300 border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
+                                className='border-gray-300 border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none rounded-lg'
                             >
                                 Discard
                             </button>
                             <button
                                 onClick={handlePost}
                                 type='button'
-                                className='bg-[#F51997] text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
+                                className='rounded-lg text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none group bg-gradient-to-br from-purple-600 to-blue-500 dark:text-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800'
                             >
                                 Post
                             </button>
