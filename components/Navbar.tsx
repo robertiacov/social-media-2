@@ -8,7 +8,7 @@ import { BiSearch } from 'react-icons/bi'
 import { IoMdAdd } from 'react-icons/io'
 
 import { IUser } from '../types';
-import Logo from '../utils/tiktik-logo.png'
+import Logo from '../utils/app-logo.png'
 import { createOrGetUser } from '../utils'
 
 import userAuthStore from '../store/authStore'
