@@ -51,7 +51,7 @@ const Comments = ({ comment, setComment, addComment, comments, isPostingComment 
                         <div className='hidden xl:block'>
                           <p className='flex gap-1 items-center text-md font-bold text-primary lowercase cursor-pointer'>
                             {user.userName.replace(/\s+/g, '')}{' '}
-                            <GoVerified className='text-blue-400' />
+                            <GoVerified className='text-[#663399]' />
                           </p>
                           
                         </div>

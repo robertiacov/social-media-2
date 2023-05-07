@@ -60,7 +60,7 @@ const VideoCard: NextPage<IProps> = ({post: { caption, postedBy, video, _id, lik
                         <div className='flex items-center gap-2'>
                             <p className='flex gap-2 items-center md:text-md font-bold text-primary'>
                                 {postedBy.userName}{' '}
-                                <GoVerified className='text-blue-400 text-md' />
+                                <GoVerified className='text-[#663399] text-md' />
                             </p>
                             <p className='capitalize font-medium text-xs text-gray-500 hidden md:block'>
                                 {postedBy.userName}

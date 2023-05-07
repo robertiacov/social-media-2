@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import {GoogleLogin, googleLogout} from '@react-oauth/google'
 import { AiOutlineLogout} from 'react-icons/ai'
-import { BiSearch } from 'react-icons/bi'
+import {FcSearch} from 'react-icons/fc'
 import { IoMdAdd } from 'react-icons/io'
 
 import { IUser } from '../types';
@@ -56,7 +56,8 @@ const Navbar = () => {
               onClick={handleSearch}
               className='absolute md:right-5 right-6 top-4 border-l-2 border-gray-300 pl-4 text-2xl text-gray-400'
             >
-              <BiSearch />
+              <FcSearch 
+              />
             </button>
           </form>
         </div>
