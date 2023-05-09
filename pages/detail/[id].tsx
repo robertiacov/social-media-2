@@ -131,7 +131,7 @@ const Detail = ({postDetails}: IProps) => {
                     <div>
                         <div className='text-xl font-bold lowercase tracking-wider flex gap-2 items-center justify-center'>
                             {post.postedBy.userName.replace(/\s+/g, '')}{' '}
-                            <GoVerified className='text-[#663399] text-xl' />
+                            <GoVerified className='text-[#663399] text-md' />
                         </div>
                     <p className='text-md'> {post.postedBy.userName}</p>
                     </div>

@@ -35,7 +35,7 @@ module.exports = {
       },
       backgroundImage: {
         'blurred-img':
-          "url('https://drive.google.com/uc?export=view&id=1ttBRPlD4aGF2Y0yElTuSrA_xhO-VqOZk')",
+          "url('https://drive.google.com/uc?export=view&id=1i2C3zWx1Sevyz3bKGjg7wdK2MbSCseDJ')",
       },
     },
   },

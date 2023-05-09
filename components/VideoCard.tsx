@@ -92,20 +92,20 @@ const VideoCard: NextPage<IProps> = ({post: { caption, postedBy, video, _id, lik
                     <div className='absolute bottom-6 cursor-pointer left-8 md:left-14 lg:left-0 flex gap-10 lg:justify-between w-[100px] md:w-[50px] lg:w-[600px] p-3'>
                         {playing ? (
                             <button onClick={onVideoPress}>
-                                <BsFillPauseFill className='text-black text-2xl lg:text-4xl' />
+                                <BsFillPauseFill className='text-white text-2xl lg:text-4xl' />
                             </button>
                         ) : (
                             <button onClick={onVideoPress}>
-                                <BsFillPlayFill className='text-black text-2xl lg:text-4xl' />
+                                <BsFillPlayFill className='text-white text-2xl lg:text-4xl' />
                             </button>
                         )}
                         {isVideoMuted ? (
                             <button onClick={() => setIsVideoMuted(false)}>
-                                <HiVolumeOff className='text-black text-2xl lg:text-4xl' />
+                                <HiVolumeOff className='text-white text-2xl lg:text-4xl' />
                             </button>
                         ) : (
                             <button onClick={() => setIsVideoMuted(true)}>
-                                <HiVolumeUp className='text-black text-2xl lg:text-4xl' />
+                                <HiVolumeUp className='text-white text-2xl lg:text-4xl' />
                             </button>
                         )}
                     </div>
