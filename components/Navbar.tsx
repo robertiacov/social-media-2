@@ -40,7 +40,7 @@ const Navbar = () => {
                 <Image 
                     className='cursor-pointer'
                     src={Logo}
-                    alt = "TikTik"
+                    alt = "VidVers"
                     layout='responsive'
                 />
             </div>
