@@ -78,14 +78,20 @@ const Upload = () => {
    } 
 
   return (
-    <div className='flex w-full h-full absolute left-0 top-[60px] lg:top-[70px] mb-10 md:pt-10 pt-1 lg:pt-20 lg:pb-20 md:pb-10 bg-[#F8F8F8] justify-center'>
-        <div className=' bg-white rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-between items-center p-14 pt-6'>
+    <div className='flex w-full h-full absolute left-0 top-[60px] lg:top-[70px] 
+                    mb-10 md:pt-10 pt-1 lg:pt-20 lg:pb-20 md:pb-10 bg-[#F8F8F8] 
+                    justify-center'>
+        <div className='bg-white rounded-lg xl:h-[80vh] flex gap-6 flex-wrap 
+                        justify-between items-center p-14 pt-6'>
             <div>
                 <div>
                     <p className='text-2xl font-bold'>Upload Video</p>
                     <p className='text-md text-gray-400 mt-1'>Post a video to your account</p>
                 </div>
-                <div className='border-dashed rounded-xl border-4 border-gray-200 flex flex-col justify-center items-center outline-none lg:mt-10 mt-5 w-[260px] h-[458px] p-10 cursor-pointer hover:border-red-300 hover:bg-gray-100'>
+                <div className='border-dashed rounded-xl border-4 border-gray-200 flex 
+                                flex-col justify-center items-center outline-none lg:mt-10 
+                                mt-5 w-[260px] h-[458px] p-10 cursor-pointer hover:border-red-300 
+                                hover:bg-gray-100'>
                     {isLoading? (
                         <p className='text-center text-3xl text-red-400 font-semibold'>
                             Uploading...
@@ -120,7 +126,10 @@ const Upload = () => {
                                             Up to 10 minutes <br />
                                             Less than 2 GB
                                         </p>
-                                        <p className='rounded-lg text-center mt-10 rounded text-white text-md font-medium p-2 w-52 outline-none group bg-gradient-to-br from-purple-600 to-blue-500 dark:text-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800'>
+                                        <p className='rounded-lg text-center mt-10 rounded text-white text-md 
+                                                      font-medium p-2 w-52 outline-none group bg-gradient-to-br 
+                                                      from-purple-600 to-blue-500 dark:text-white focus:ring-4 
+                                                      focus:ring-blue-300 dark:focus:ring-blue-800'>
                                             Select file
                                         </p>
                                     </div>
@@ -179,7 +188,9 @@ const Upload = () => {
                             <button
                                 onClick={handlePost}
                                 type='button'
-                                className='rounded-lg text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none group bg-gradient-to-br from-purple-600 to-blue-500 dark:text-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800'
+                                className='rounded-lg text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none group 
+                                           bg-gradient-to-br from-purple-600 to-blue-500 dark:text-white focus:ring-4 focus:ring-blue-300 
+                                           dark:focus:ring-blue-800'
                             >
                                 Post
                             </button>

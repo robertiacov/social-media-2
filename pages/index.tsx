@@ -37,8 +37,6 @@ export const getServerSideProps = async ({
   } else {
       response = await axios.get(`${BASE_URL}/api/post`)
   }
-
-
   return {
     props: {
       videos: response.data
