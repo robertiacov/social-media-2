@@ -84,8 +84,8 @@ const Detail = ({postDetails}: IProps) => {
                     <MdOutlineCancel className='text-white text-[35px] hover:opacity-90' />
                 </p>
             </div>
-            <div className='relative md:w-[900px] lg:w-full'>
-                <div className='lg:h-[100vh] h-[60vh]'>
+            <div className='relative '>
+                <div className='lg:h-[100vh]  h-[60vh] '>
                     <video
                         ref={videoRef}
                         loop

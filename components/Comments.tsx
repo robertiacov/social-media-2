@@ -49,8 +49,7 @@ const Comments = ({ comment, setComment, addComment, comments, isPostingComment 
                             />
                         </div>
                         <div className='xl:block'>
-                          <p className='flex gap-1 items-center text-md font-bold 
-                                        text-primary lowercase cursor-pointer'>
+                          <p className='flex cursor-pointer gap-1 items-center text-[18px] font-bold leading-6 text-primary'>
                             {user.userName.replace(/\s+/g, '')}{' '}
                             <GoVerified className='text-[#663399] '/>
                           </p>         
@@ -58,7 +57,7 @@ const Comments = ({ comment, setComment, addComment, comments, isPostingComment 
                       </div>
                     </Link>
                     <div>
-                        <p className='-mt-6 ml-16 text-[16px] mr-8'>
+                        <p className='-mt-5 ml-16 text-[16px] mr-8'>
                           {item.comment}
                         </p>
                     </div>
